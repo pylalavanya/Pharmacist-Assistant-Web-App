@@ -18,7 +18,7 @@ A Flask-based **Pharmacist’s Assistant** that processes **handwritten prescrip
 ## **🛠️ Installation & Setup**
 ### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/your-username/pharmacy-assistant.git
+git clone https://github.com/pylalavanya/Pharmacist-Assistant-Web-App.git
 cd pharmacy-assistant
 ```
 

@@ -19,7 +19,6 @@ A Flask-based **Pharmacist’s Assistant** that processes **handwritten prescrip
 ### **1️⃣ Clone the Repository**
 ```bash
 git clone https://github.com/pylalavanya/Pharmacist-Assistant-Web-App.git
-cd pharmacy-assistant
 ```
 
 ### **2️⃣ Create a Virtual Environment** (Optional but Recommended)
@@ -40,7 +39,7 @@ pip install -r requirements.txt
 ### **🔹 Database Setup**
 The app uses **SQLite** as the database. If `pharmacy.db` does not exist, create it with:
 ```bash
-python setup_db.py
+python initialize_db.py
 ```
 This will create the required tables:  
 - `orders` → Stores patient prescriptions & matched medicines  

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacist Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h2>Upload Prescription</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="patient_name" placeholder="Patient Name" required>
+        <input type="file" name="prescription" required>
+        <button type="submit">Upload Prescription</button>
+    </form>
+    
+    {% if matched_meds %}
+        <h2>Matched Medicines</h2>
+        <ul>
+            {% for med in matched_meds %}
+                <li>{{ med }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <!-- Buttons Section -->
+    <div class="button-container">
+        <a href="/orders" class="btn">View Orders</a>
+        <a href="/admin" class="btn admin-btn">Medicines</a>
+    </div>
+
+    <!-- How This Web Application Works Section -->
+    <div class="container mt-4">
+        <h2>How This Web Application Works</h2>
+        <p>This Pharmacist Assistant Web App helps pharmacists manage prescriptions efficiently using OCR technology. Below are the key features:</p>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Upload Handwritten Prescription</h5>
+                <p class="card-text">
+                    The pharmacist can upload a scanned or handwritten prescription, and the system will extract the text using OCR (Optical Character Recognition).
+                </p>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Automatic Medicine Matching</h5>
+                <p class="card-text">
+                    The app will automatically match the extracted medicines with the existing database, helping the pharmacist quickly identify available medicines.
+                </p>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Manage Orders</h5>
+                <p class="card-text">
+                    Pharmacists can view all patient orders, update their status (Pending, Processed, Completed), and delete incorrect orders from the system.
+                </p>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Generate PDF Receipts</h5>
+                <p class="card-text">
+                    For every processed order, the system can generate a PDF receipt containing patient details, matched medicines, and prescription information.
+                </p>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Admin Panel (Medicine Management)</h5>
+                <p class="card-text">
+                    The Admin Panel allows pharmacists to add, edit, and delete medicines, keeping the database up-to-date with accurate medicine details.
+                </p>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Easy Navigation</h5>
+                <p class="card-text">
+                    The system provides a “Back to Home” button on all pages for seamless navigation between the Admin Panel, Orders Page, and Home Page.
+                </p>
+            </div>
+        </div>
+
+        <h4 class="mt-4">How Can a Pharmacist Use This System?</h4>
+        <ul>
+            <li>Upload a prescription image from a patient.</li>
+            <li>The system will extract text and match medicines automatically.</li>
+            <li>View all patient orders and update their status.</li>
+            <li>Use the Admin Panel to add, update, or remove medicines.</li>
+            <li>Generate and download a PDF receipt for each order.</li>
+        </ul>
+
+        <p class="mt-3"><b>This web application simplifies the prescription handling process, making pharmacists' work faster and more efficient.</b></p>
+    </div>
+
+</body>
+</html>

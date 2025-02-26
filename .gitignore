@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.venv
+
+# Flask-specific
+instance/
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.sqlite3
+*.db
+
+# Pip dependency file
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment variables / secrets
+.env
+.env.local
+.env.production
+.env.test
+config.py
+settings.py
+
+# Ignore report files
+*.pdf
+reports/
+
+# Ignore uploaded files (if any)
+uploads/
+static/uploads/
+
+# Ignore Python egg and build files
+*.egg
+*.egg-info/
+dist/
+build/

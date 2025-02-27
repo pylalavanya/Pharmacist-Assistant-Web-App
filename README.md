@@ -44,9 +44,24 @@ python initialize_db.py
 This will create the required tables:  
 - `orders` → Stores patient prescriptions & matched medicines  
 - `medicines` → Stores medicine details  
+---
+---
+### **🔹 Installing Tesseract OCR**
+Tesseract OCR must be installed separately from the official source:  
+
+- **Windows**: Download and install from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki).  
+- **macOS**: Install via Homebrew:  
+  ```bash
+  brew install tesseract
+  ```
+- **Linux**: Install using APT (Debian/Ubuntu) or YUM (Fedora):  
+  ```bash
+  sudo apt install tesseract-ocr
+  ```
+
+After installation, ensure the Tesseract executable path is set correctly in your Python script if needed.  
 
 ---
-
 ## **▶️ Running the Application**
 ```bash
 python app.py
@@ -97,22 +112,7 @@ Pillow (Image Processing)
 FuzzyWuzzy (Fuzzy Matching)  
 ```
 
-### **🔹 Installing Tesseract OCR**
-Tesseract OCR must be installed separately from the official source:  
 
-- **Windows**: Download and install from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki).  
-- **macOS**: Install via Homebrew:  
-  ```bash
-  brew install tesseract
-  ```
-- **Linux**: Install using APT (Debian/Ubuntu) or YUM (Fedora):  
-  ```bash
-  sudo apt install tesseract-ocr
-  ```
-
-After installation, ensure the Tesseract executable path is set correctly in your Python script if needed.  
-
----
 
 Let me know if you want any further modifications! 🚀
 Install all dependencies using:

@@ -89,14 +89,32 @@ python app.py
 ## **🛠️ Dependencies**
 The project uses the following Python libraries:
 ```txt
-Flask
-SQLite3
-Pytesseract (OCR)
-ReportLab (PDF Generation)
-Pillow (Image Processing)
-FuzzyWuzzy (Fuzzy Matching)
+Flask  
+SQLite3  
+Pytesseract (OCR)  
+ReportLab (PDF Generation)  
+Pillow (Image Processing)  
+FuzzyWuzzy (Fuzzy Matching)  
 ```
 
+### **🔹 Installing Tesseract OCR**
+Tesseract OCR must be installed separately from the official source:  
+
+- **Windows**: Download and install from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki).  
+- **macOS**: Install via Homebrew:  
+  ```bash
+  brew install tesseract
+  ```
+- **Linux**: Install using APT (Debian/Ubuntu) or YUM (Fedora):  
+  ```bash
+  sudo apt install tesseract-ocr
+  ```
+
+After installation, ensure the Tesseract executable path is set correctly in your Python script if needed.  
+
+---
+
+Let me know if you want any further modifications! 🚀
 Install all dependencies using:
 ```bash
 pip install -r requirements.txt
